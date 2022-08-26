@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 
-import { Button, Col, Image, Row, Table, Tag } from "antd";
+import { Alert, Button, Col, Image, notification, Row, Table, Tag } from "antd";
 import { getPokemon } from "../../redux/home/home.api";
 import { handleAddToBag, handleRandomizeArray } from "../../redux/home/home.reducer";
 import LayoutCustom from "../../components/shared/LayoutCustom";
@@ -36,7 +36,35 @@ export default function Home() {
         setFilterInput('')
     }
 
-    const handleBag = (obj) => dispatch(handleAddToBag(obj))
+    const openNotification = () => {
+        const key = `open${Date.now()}`;
+        const btn = (
+            <Button size="" type="primary" onClick={() => {
+                notification.close(key)
+                router.push('/bag')
+            }}>
+                🎒 Go to Bag
+            </Button>)
+        notification.open({
+
+            message: 'Error',
+            description: 'Bag is full!, Maximum capacity of bag is 10',
+            icon: <>❗️</>,
+            onClick: () => {
+                console.log('Notification Clicked!');
+            },
+            btn
+        });
+    };
+
+    const handleBag = (obj) => {
+
+        if (bagData.length >= 10) {
+            openNotification()
+        } else {
+            dispatch(handleAddToBag(obj))
+        }
+    }
 
     const handleResetData = () => {
         setFilter('')
