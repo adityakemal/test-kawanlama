@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 
-import { Alert, Button, Col, Image, notification, Row, Table, Tag } from "antd";
+import { Button, Col, Image, notification, Row, Table, Tag } from "antd";
 import { getPokemon } from "../../redux/home/home.api";
 import { handleAddToBag, handleRandomizeArray } from "../../redux/home/home.reducer";
 import LayoutCustom from "../../components/shared/LayoutCustom";
