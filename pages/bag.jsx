@@ -21,7 +21,7 @@ export default function Bag() {
 
     return (
 
-        <LayoutCustom title='My Bag 🎒' isBack>
+        <LayoutCustom title='My Bag 🎒' isBack isBackHome>
             <div className="home">
                 <Row justify="center" gutter={12}>
                     <Col xs={24} sm={24} md={24} lg={16} xl={16}>

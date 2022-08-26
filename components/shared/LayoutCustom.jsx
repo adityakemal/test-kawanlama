@@ -42,6 +42,8 @@ export default function LayoutCustom({ children, title, isBack, siderChild, isSi
           isSider &&
           <Sider
             width={160}
+            breakpoint="lg"
+            collapsedWidth="0"
             style={{
               overflow: 'auto',
               height: '100vh',
@@ -51,11 +53,11 @@ export default function LayoutCustom({ children, title, isBack, siderChild, isSi
               bottom: 0,
               color: 'white',
               paddingTop: 70,
-              paddingLeft: 10,
-              paddingRight: 10,
+              // paddingLeft: 10,
+              // paddingRight: 10,
             }}
           >
-            <div>{siderChild()}</div>
+            <div style={{ paddingLeft: 10, paddingRight: 10 }}>{siderChild()}</div>
           </Sider>
         }
         <Content>

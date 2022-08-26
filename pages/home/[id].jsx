@@ -76,6 +76,7 @@ export default function DetailPokemon({ data }) {
         ]
 
         const linksComp = () => acceptedLink.map((res, i) => (
+            data[res].length !== 0 &&
             <a href={`#${res}`} key={i}>
                 <Button className='butchild' size=''>
                     {res} 👉

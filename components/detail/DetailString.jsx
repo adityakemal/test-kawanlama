@@ -4,8 +4,6 @@ import React from 'react'
 export default function DetailString({ title, value }) {
     return (
         <div className="boxdetail basestring" id={title}>
-            {/* <h3>{title} </h3>  */}
-            {/* <Divider style={{ marginTop: 10 }}></Divider> */}
             <Row>
                 <Col span={6}>
 

@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 
 export default function Moves({ data, title }) {
     return (
+        data.length !== 0 &&
         <div className="boxdetail" id={title}>
             <h3>{title} </h3>
             <Divider style={{ marginTop: 10 }}></Divider>
