@@ -1,0 +1,78 @@
+.home {}
+
+.detail {
+    .warpimage {
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 20px;
+    }
+
+    .boxdetail {
+        background-color: white;
+        padding: 10px;
+        border-radius: 6px;
+        // font-size: 12px;
+        margin-bottom: 70px;
+    }
+
+    .boxdetail.basestring {
+        background-color: white;
+        padding: 10px;
+        border-radius: 6px;
+        // font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        text-transform: capitalize;
+        margin: 0 !important;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title {
+        font-weight: 400;
+        color: $warning;
+        font-size: small;
+    }
+
+    .value {
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    }
+
+    hr {
+        border: .5px solid #e3e3e3;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card {
+
+        .box {
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid $warning;
+            padding: 5px;
+
+            p {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .value {
+            font-size: 12px;
+
+        }
+    }
+
+}
+
+.butchild {
+    width: 100% !important;
+    margin-bottom: 5px;
+    text-align: left !important;
+    font-size: 12px !important;
+    // text-transform: capitalize;
+}
