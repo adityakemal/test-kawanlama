@@ -91,7 +91,7 @@ export default function Bag() {
                                         return (
                                             <div className="action-buttons" style={{ textAlign: 'center' }}>
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
-                                                    🕵️‍♂️ Detail
+                                                    🔍 Detail
                                                 </Button>
                                             </div>
                                         )

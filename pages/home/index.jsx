@@ -182,7 +182,7 @@ export default function Home() {
                                         return (
                                             <div className="action-buttons" style={{ textAlign: 'center' }}>
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
-                                                    🕵️‍♂️ Detail
+                                                    🔍 Detail
                                                 </Button>
                                             </div>
                                         )
