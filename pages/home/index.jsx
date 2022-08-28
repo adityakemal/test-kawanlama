@@ -95,7 +95,7 @@ export default function Home() {
     const handleFilter = () => {
 
         if (Filter.length !== 0) {
-            const filtered = pokemonData.filter(res => res.name.includes(Filter))
+            const filtered = pokemonData.filter(res => res.name.includes(Filter.toLowerCase()))
             setData(filtered)
         } else {
             setData(pokemonData)
@@ -178,26 +178,7 @@ export default function Home() {
                                         )
                                     }
                                 },
-                                // {
-                                //     title: "",
-                                //     key: "bag",
-                                //     fixed: "center",
-                                //     width: "fit-content",
-                                //     render: (_, obj) => (
-                                //         <div className="action-buttons" style={{ textAlign: 'center' }}>
-                                //             {
-                                //                 bagData.some((v) => v.name === obj.name) ?
-                                //                     <small><i>-Already in Bag-</i></small>
-                                //                     :
-                                //                     <Button
-                                //                         onClick={() => handleBag(obj)}
-                                //                     >
-                                //                         🎒 Save To Bag!
-                                //                     </Button>
-                                //             }
-                                //         </div>
-                                //     ),
-                                // },
+
 
                                 {
                                     title: "Action",
