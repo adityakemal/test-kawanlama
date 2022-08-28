@@ -78,7 +78,7 @@ export default function Bag() {
                                         return (
                                             <Space size={[8, 16]} wrap align="center" direction='horizontal'>
                                                 <Button danger onClick={() => handleRemove(obj.name)}>
-                                                    🗑 Remove
+                                                    🗑 Drop
                                                 </Button>
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
                                                     🔍 Detail

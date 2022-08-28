@@ -196,13 +196,14 @@ export default function Home() {
                                                         <Button
                                                             disabled
                                                         >
-                                                            Already in Bag!
+                                                            <i>🎒 In bag</i>
                                                         </Button>
                                                         :
                                                         <Button
+                                                            type="primary"
                                                             onClick={() => handleBag(obj)}
                                                         >
-                                                            🎒 Save To Bag!
+                                                            ✋Catch!
                                                         </Button>
                                                 }
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
