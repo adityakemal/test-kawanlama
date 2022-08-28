@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 
-import { Button, Col, Image, notification, Row, Table, Tag } from "antd";
+import { Button, Col, Image, notification, Row, Space, Table, Tag } from "antd";
 import { getPokemon } from "../../redux/home/home.api";
 import { handleAddToBag, handleRandomizeArray } from "../../redux/home/home.reducer";
 import LayoutCustom from "../../components/shared/LayoutCustom";
@@ -178,29 +178,29 @@ export default function Home() {
                                         )
                                     }
                                 },
-                                {
-                                    title: "",
-                                    key: "bag",
-                                    fixed: "center",
-                                    width: "fit-content",
-                                    render: (_, obj) => (
-                                        <div className="action-buttons" style={{ textAlign: 'center' }}>
-                                            {
-                                                bagData.some((v) => v.name === obj.name) ?
-                                                    <small><i>-Already in Bag-</i></small>
-                                                    :
-                                                    <Button
-                                                        onClick={() => handleBag(obj)}
-                                                    >
-                                                        🎒 Save To Bag!
-                                                    </Button>
-                                            }
-                                        </div>
-                                    ),
-                                },
+                                // {
+                                //     title: "",
+                                //     key: "bag",
+                                //     fixed: "center",
+                                //     width: "fit-content",
+                                //     render: (_, obj) => (
+                                //         <div className="action-buttons" style={{ textAlign: 'center' }}>
+                                //             {
+                                //                 bagData.some((v) => v.name === obj.name) ?
+                                //                     <small><i>-Already in Bag-</i></small>
+                                //                     :
+                                //                     <Button
+                                //                         onClick={() => handleBag(obj)}
+                                //                     >
+                                //                         🎒 Save To Bag!
+                                //                     </Button>
+                                //             }
+                                //         </div>
+                                //     ),
+                                // },
 
                                 {
-                                    title: "",
+                                    title: "Action",
                                     key: "operation",
                                     fixed: "center",
                                     width: "fit-content",
@@ -208,11 +208,28 @@ export default function Home() {
                                         const idObj = obj.url.split('/')
                                         const idPoke = idObj[idObj.length - 2]
                                         return (
-                                            <div className="action-buttons" style={{ textAlign: 'center' }}>
+                                            // <div className="action-buttons" style={{ textAlign: 'center' }}>
+                                            <Space size={[8, 16]} wrap align="center" direction='horizontal'>
+                                                {
+                                                    bagData.some((v) => v.name === obj.name) ?
+                                                        <Button
+                                                            disabled
+                                                        >
+                                                            Already in Bag!
+                                                        </Button>
+                                                        :
+                                                        <Button
+                                                            onClick={() => handleBag(obj)}
+                                                        >
+                                                            🎒 Save To Bag!
+                                                        </Button>
+                                                }
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
                                                     🔍 Detail
                                                 </Button>
-                                            </div>
+
+                                            </Space>
+                                            // </div>
                                         )
                                     }
 
@@ -227,7 +244,7 @@ export default function Home() {
                                 pageSizeOptions: ['5', '10', '20', '30'],
                                 // onShowSizeChange: (e, v) => console.log(e, v),
                                 showTotal: (total, range) => (
-                                    <span style={{ left: 0, position: "absolute" }}>
+                                    <span style={{ left: 0, float: "left", fontSize: 12 }}>
                                         Showing {range[0]} to {range[1]} of {total} results
                                     </span>
                                 ),

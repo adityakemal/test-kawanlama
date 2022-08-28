@@ -11,7 +11,7 @@ export default function Moves({ data, title }) {
                 {
                     data.map((res, i) => (
                         <Fragment key={i}>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Name
                                 </div>
@@ -19,7 +19,7 @@ export default function Moves({ data, title }) {
                                     {res?.move?.name}
                                 </p>
                             </Col>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Url
                                 </div>
@@ -34,7 +34,7 @@ export default function Moves({ data, title }) {
                                 <Row gutter={[10, 10]}>
                                     {
                                         res?.version_group_details?.map((v, j) => (
-                                            <Col span={8} className='card'>
+                                            <Col xs={24} md={8} className='card'>
                                                 <div className="box">
                                                     <p className='value'>
                                                         move_learn_method : {v?.move_learn_method?.name}

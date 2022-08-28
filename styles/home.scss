@@ -1,6 +1,8 @@
 .home {}
 
 .detail {
+    padding-top: 20px;
+
     .warpimage {
         margin-bottom: 20px;
         background-color: white;
@@ -12,7 +14,7 @@
         padding: 10px;
         border-radius: 6px;
         // font-size: 12px;
-        margin-bottom: 70px;
+        margin-top: 70px;
     }
 
     .boxdetail.basestring {
@@ -20,13 +22,14 @@
         padding: 10px;
         border-radius: 6px;
         // font-size: 12px;
-        margin-bottom: 12px;
+        margin-top: 12px;
     }
 
     h3 {
         text-transform: capitalize;
         margin: 0 !important;
-        text-align: center;
+        // text-align: center;
+        font-weight: bolder;
         width: 100%;
     }
 

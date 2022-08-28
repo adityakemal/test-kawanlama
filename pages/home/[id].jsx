@@ -92,8 +92,8 @@ export default function DetailPokemon({ data }) {
             <div className="detail">
                 <Row justify="center" gutter={12}>
                     <Col xs={24} sm={24} md={24} lg={16} xl={16}>
-                        <Row gutter={12}>
-                            <Col flex={'none'}>
+                        <Row gutter={12} align={'center'}>
+                            <Col justify={'center'}>
                                 <div className="warpimage">
                                     <Image
                                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
@@ -101,17 +101,15 @@ export default function DetailPokemon({ data }) {
                                         fallback="https://via.placeholder.com/75x75?text=404"
                                         style={{ border: '1px solid #e3e3e3' }}
                                     />
-
                                 </div>
                             </Col>
-                            <Col flex={'auto'}>
-                                <DetailString title={`id`} value={id} />
-                                <DetailString title={`name`} value={name} />
-                                <DetailString title={`height`} value={height} />
-                                <DetailString title={`weight`} value={weight} />
-                                <DetailString title={`base_experience`} value={base_experience} />
-                            </Col>
                         </Row>
+
+                        <DetailString title={`id`} value={id} />
+                        <DetailString title={`name`} value={name} />
+                        <DetailString title={`height`} value={height} />
+                        <DetailString title={`weight`} value={weight} />
+                        <DetailString title={`base_experience`} value={base_experience} />
 
 
                         <DetailString title={`location_area_encounters`} value={location_area_encounters} />

@@ -11,7 +11,7 @@ export default function GameIndices({ data, title }) {
                 {
                     data.map((res, i) => (
                         <Fragment key={i}>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Version
                                 </div>
@@ -19,7 +19,7 @@ export default function GameIndices({ data, title }) {
                                     {res?.version?.name}
                                 </p>
                             </Col>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Url
                                 </div>
@@ -28,7 +28,7 @@ export default function GameIndices({ data, title }) {
                                 </p>
                             </Col>
 
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Game Index
                                 </div>

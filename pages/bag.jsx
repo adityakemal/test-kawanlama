@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 
-import { Button, Col, Image, Row, Table } from "antd";
+import { Button, Col, Image, Row, Space, Table } from "antd";
 import { handleRemoveBag } from "../redux/home/home.reducer";
 import LayoutCustom from "../components/shared/LayoutCustom";
 
@@ -66,22 +66,9 @@ export default function Bag() {
                                     }
 
                                 },
-                                {
-                                    title: "",
-                                    key: "bag",
-                                    fixed: "center",
-                                    width: "fit-content",
-                                    render: (_, obj) => (
-                                        <div className="action-buttons" style={{ textAlign: 'center' }}>
-                                            <Button danger onClick={() => handleRemove(obj.name)}>
-                                                🗑 Remove
-                                            </Button>
-                                        </div>
-                                    ),
-                                },
 
                                 {
-                                    title: "",
+                                    title: "Action",
                                     key: "operation",
                                     fixed: "center",
                                     width: "fit-content",
@@ -89,11 +76,14 @@ export default function Bag() {
                                         const idObj = obj.url.split('/')
                                         const idPoke = idObj[idObj.length - 2]
                                         return (
-                                            <div className="action-buttons" style={{ textAlign: 'center' }}>
+                                            <Space size={[8, 16]} wrap align="center" direction='horizontal'>
+                                                <Button danger onClick={() => handleRemove(obj.name)}>
+                                                    🗑 Remove
+                                                </Button>
                                                 <Button onClick={() => router.push(`/home/${idPoke}`)}>
                                                     🔍 Detail
                                                 </Button>
-                                            </div>
+                                            </Space>
                                         )
                                     }
 

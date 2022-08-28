@@ -11,7 +11,7 @@ export default function HeldItems({ data, title }) {
                 {
                     data.map((res, i) => (
                         <Fragment key={i}>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Item
                                 </div>
@@ -19,7 +19,7 @@ export default function HeldItems({ data, title }) {
                                     {res?.item?.name}
                                 </p>
                             </Col>
-                            <Col span={12}>
+                            <Col xs={24} md={12}>
                                 <div className="title">
                                     Url
                                 </div>
@@ -34,7 +34,7 @@ export default function HeldItems({ data, title }) {
                                 <Row gutter={[10, 10]}>
                                     {
                                         res?.version_details?.map((v, j) => (
-                                            <Col span={6} className='card'>
+                                            <Col xs={24} md={6} className='card'>
                                                 <div className="box">
                                                     <p className='value'>
                                                         Rarity : {v?.rarity}
