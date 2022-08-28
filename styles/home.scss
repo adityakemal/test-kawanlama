@@ -23,6 +23,10 @@
         border-radius: 6px;
         // font-size: 12px;
         margin-top: 12px;
+
+        .value {
+            overflow-wrap: break-word;
+        }
     }
 
     h3 {
@@ -41,6 +45,7 @@
 
     .value {
         font-weight: 700;
+        overflow-wrap: break-word;
         margin-bottom: 8px;
         font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     }
